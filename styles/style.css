@@ -1,0 +1,110 @@
+@import url("ul.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Conteudo original preservado
+body {
+  background-image: url(assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+*/
+body {
+  background: linear-gradient(
+    135deg,
+    hsl(220, 15%, 5%) 0%,
+    /* #0a0b0d */ hsl(220, 20%, 8%) 25%,
+    /* #0f1419 */ hsl(215, 25%, 12%) 50%,
+    /* #1a202c */ hsl(220, 20%, 8%) 75%,
+    /* #0f1419 */ hsl(220, 15%, 5%) 100%
+  ); /* #0a0b0d */
+  background-attachment: fixed;
+}
+
+body * {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+#container {
+  width: 100vh;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+body {
+  position: relative;
+}
+
+body::before {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  width: 100dvw;
+  height: 100dvh;
+  /* config do background abaixo */
+}
+
+#profile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  gap: 32px;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+ion-icon:hover {
+  color: rgb(138, 138, 138);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 799px) {
+  #container {
+    max-width: 588px;
+  }
+}
