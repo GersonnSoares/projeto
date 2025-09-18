@@ -12,10 +12,13 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
@@ -26,5 +29,5 @@ ul li a {
 /* peseudo- selector*/
 ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  border: 1.5px solid var(--text-color);
 }
